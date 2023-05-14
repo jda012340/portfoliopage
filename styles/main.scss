@@ -1,0 +1,129 @@
+$f20px:1.25rem;
+$f25px:1.563rem;
+$f30px:1.875rem;
+$f40px:2.5rem;
+$f90px:5.625rem;
+$f100px:6.25rem;
+$f120px:7.5rem;
+$mainColor:#D6E0F0;
+$subColor:#607C9A;
+$pointColorDeep:#304A67;
+@mixin titletext {font-size:$f40px; color:$pointColorDeep; font-weight:800;}
+header {
+
+}
+main {
+    .intro {
+        background-color:$mainColor;
+        height:100vh;
+        .name {
+            // background-color:rebeccapurple;
+            width:100%; height:100px; text-align:right;
+            background-image:url(../images/wave.png); background-repeat:repeat-x;
+            span {background-color:$mainColor; font-size:$f90px; font-weight:800; color:$pointColorDeep; letter-spacing:-0.02em;}
+
+        }
+        .intro_contents {
+            // background-color:yellow;
+            display:flex;
+            width:100%; height:calc(100% - 200px);
+            .start {
+                // background-color:plum;
+                display:flex; flex-flow:column nowrap; justify-content:center; align-items:center;
+                width:30%; border:10px solid $pointColorDeep;
+                .move {
+                    display:flex;
+                    span {
+                        background-color:$pointColorDeep; text-align:center; line-height:50px; font-weight:700; color:#fff;
+                        width:50px; height:50px; font-size:$f40px;
+                    }
+                    span:nth-child(odd) {margin-top:50px;}
+                    img {}
+                }
+                p:nth-child(2) {margin:50px 0;}
+                p:last-child {@include titletext(); letter-spacing:0.5em;}
+            }//e:start
+            .main_nav {
+                display:flex; justify-content:space-between; width:70%;
+                li {
+                    // background-color:greenyellow;
+                    width:20%;
+                    p {
+                        // background-color:pink;        
+                        height:50%; text-align:center; display:flex;justify-content:center; align-items:center;
+                        border:10px solid $pointColorDeep; border-left:none;
+                        span {
+                            @include titletext();
+                            display:none;
+                        }
+                    }
+                    .icon {opacity:1; img {width: 100px;}}
+                    p:first-child {border-bottom:none;}
+                }
+            }
+        }//e:intro_contents
+        h1 {
+            display:flex; justify-content:right; align-items:center;
+            height:100px; font-size:$f120px; font-weight:800; color:$subColor; letter-spacing:-0.02em;
+            span {height:90px; padding:0 20px; img {height:100%;}}
+        }
+    }//e:intro
+    .profile {
+        background-color:beige;
+        height:100vh; padding:100px;
+        > ul {
+            background-color:pink;
+            display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:repeat(2,50%); height:100%;
+            > li {
+                display:flex; flex-flow:column nowrap; align-items:center; justify-content:space-between;
+                border:3px solid $subColor; text-align:center;
+                > h1 {
+                    background-color:$subColor; color:#fff;
+                    width:100%; font-size:$f30px; line-height:2; font-weight:700;
+                }
+                dl {
+                    background-color:salmon;
+                    height:100%; display:flex; flex-flow:column nowrap; justify-content:center;
+                    text-align:left;
+                    dt {font-size:$f25px; font-weight:800; line-height:1.5; color:$pointColorDeep;}
+                    dd {
+                        font-size:$f20px;
+                    }
+                }
+            }
+            .me {
+                justify-content:center;
+                .img_wrap {background-color:purple; width:50%; height:200px;}
+                .me_contents {
+                    display:flex; flex-flow:column nowrap; align-items: center;
+                    h1 {font-size:$f30px; font-weight:600; color:$subColor; line-height:1.5;}
+                    p {font-weight:700; color:$subColor; line-height:1.2;}
+                }
+            }
+            .fighting {
+                justify-content:center;
+                p:first-child {
+                    @include titletext(); line-height:2;
+                }
+                p:last-child {
+                    font-size:$f25px; font-weight:600; color:$subColor; line-height:1.5;
+                }
+            }
+            .about {
+                background-color:bisque;
+                
+            }
+            .tool {
+                ul {
+                    display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:repeat(3,1fr); gap:20px;
+                    li {
+                        background-color:aqua;
+                    }
+                }
+            }//e:tool
+        }//e:ul
+    }//e:profile
+    .web {
+
+    }//e:web
+}//e:main

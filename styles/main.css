@@ -1,0 +1,201 @@
+main .intro {
+  background-color: #D6E0F0;
+  height: 100vh;
+}
+main .intro .name {
+  width: 100%;
+  height: 100px;
+  text-align: right;
+  background-image: url(../images/wave.png);
+  background-repeat: repeat-x;
+}
+main .intro .name span {
+  background-color: #D6E0F0;
+  font-size: 5.625rem;
+  font-weight: 800;
+  color: #304A67;
+  letter-spacing: -0.02em;
+}
+main .intro .intro_contents {
+  display: flex;
+  width: 100%;
+  height: calc(100% - 200px);
+}
+main .intro .intro_contents .start {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  border: 10px solid #304A67;
+}
+main .intro .intro_contents .start .move {
+  display: flex;
+}
+main .intro .intro_contents .start .move span {
+  background-color: #304A67;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 700;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  font-size: 2.5rem;
+}
+main .intro .intro_contents .start .move span:nth-child(odd) {
+  margin-top: 50px;
+}
+main .intro .intro_contents .start p:nth-child(2) {
+  margin: 50px 0;
+}
+main .intro .intro_contents .start p:last-child {
+  font-size: 2.5rem;
+  color: #304A67;
+  font-weight: 800;
+  letter-spacing: 0.5em;
+}
+main .intro .intro_contents .main_nav {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+main .intro .intro_contents .main_nav li {
+  width: 20%;
+}
+main .intro .intro_contents .main_nav li p {
+  height: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid #304A67;
+  border-left: none;
+}
+main .intro .intro_contents .main_nav li p span {
+  font-size: 2.5rem;
+  color: #304A67;
+  font-weight: 800;
+  display: none;
+}
+main .intro .intro_contents .main_nav li .icon {
+  opacity: 1;
+}
+main .intro .intro_contents .main_nav li .icon img {
+  width: 100px;
+}
+main .intro .intro_contents .main_nav li p:first-child {
+  border-bottom: none;
+}
+main .intro h1 {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 100px;
+  font-size: 7.5rem;
+  font-weight: 800;
+  color: #607C9A;
+  letter-spacing: -0.02em;
+}
+main .intro h1 span {
+  height: 90px;
+  padding: 0 20px;
+}
+main .intro h1 span img {
+  height: 100%;
+}
+main .profile {
+  background-color: beige;
+  height: 100vh;
+  padding: 100px;
+}
+main .profile > ul {
+  background-color: pink;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 50%);
+  height: 100%;
+}
+main .profile > ul > li {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+  border: 3px solid #607C9A;
+  text-align: center;
+}
+main .profile > ul > li > h1 {
+  background-color: #607C9A;
+  color: #fff;
+  width: 100%;
+  font-size: 1.875rem;
+  line-height: 2;
+  font-weight: 700;
+}
+main .profile > ul > li dl {
+  background-color: salmon;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  text-align: left;
+}
+main .profile > ul > li dl dt {
+  font-size: 1.563rem;
+  font-weight: 800;
+  line-height: 1.5;
+  color: #304A67;
+}
+main .profile > ul > li dl dd {
+  font-size: 1.25rem;
+}
+main .profile > ul .me {
+  justify-content: center;
+}
+main .profile > ul .me .img_wrap {
+  background-color: purple;
+  width: 50%;
+  height: 200px;
+}
+main .profile > ul .me .me_contents {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+main .profile > ul .me .me_contents h1 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #607C9A;
+  line-height: 1.5;
+}
+main .profile > ul .me .me_contents p {
+  font-weight: 700;
+  color: #607C9A;
+  line-height: 1.2;
+}
+main .profile > ul .fighting {
+  justify-content: center;
+}
+main .profile > ul .fighting p:first-child {
+  font-size: 2.5rem;
+  color: #304A67;
+  font-weight: 800;
+  line-height: 2;
+}
+main .profile > ul .fighting p:last-child {
+  font-size: 1.563rem;
+  font-weight: 600;
+  color: #607C9A;
+  line-height: 1.5;
+}
+main .profile > ul .about {
+  background-color: bisque;
+}
+main .profile > ul .tool ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+}
+main .profile > ul .tool ul li {
+  background-color: aqua;
+}/*# sourceMappingURL=main.css.map */
