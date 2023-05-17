@@ -1,6 +1,88 @@
+header {
+  background-color: #D6E0F0;
+  width: 300px;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  display: none;
+}
+header .pagename h1 {
+  font-size: 5.625rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #304A67;
+  line-height: 1.6;
+  padding-bottom: 20px;
+  display: none;
+}
+header .pagename h1:first-child {
+  display: flex;
+}
+header nav {
+  width: 100%;
+}
+header nav ul {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+}
+header nav ul li {
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  padding: 10px;
+  border: 11px solid #607C9A;
+}
+header nav ul li img {
+  width: auto;
+  height: 100%;
+}
+header nav ul .nav_active {
+  width: 150px;
+  height: 150px;
+}
+
+main {
+  background-color: #D6E0F0;
+}
+main > * {
+  width: calc(100% - 300px);
+  margin-left: 300px;
+  padding: 60px;
+}
+main .text_wrap h1 {
+  font-size: 1.875rem;
+  font-weight: 800;
+  line-height: 2;
+}
+main .text_wrap p {
+  font-size: 1.25rem;
+}
+main .img_wrap {
+  background-color: khaki;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 100%;
+  border-radius: 20px;
+  border: 7px solid #607C9A;
+}
+main .img_wrap img {
+  width: 100%;
+}
 main .intro {
   background-color: #D6E0F0;
+  width: 100%;
   height: 100vh;
+  margin: 0 auto;
 }
 main .intro .name {
   width: 100%;
@@ -27,6 +109,7 @@ main .intro .intro_contents .start {
   justify-content: center;
   align-items: center;
   width: 30%;
+  height: auto;
   border: 10px solid #304A67;
 }
 main .intro .intro_contents .start .move {
@@ -58,6 +141,7 @@ main .intro .intro_contents .main_nav {
   display: flex;
   justify-content: space-between;
   width: 70%;
+  height: auto;
 }
 main .intro .intro_contents .main_nav li {
   width: 20%;
@@ -151,7 +235,7 @@ main .profile > ul > li dl dd {
 main .profile > ul .me {
   justify-content: center;
 }
-main .profile > ul .me .img_wrap {
+main .profile > ul .me .profile_img_wrap {
   background-color: purple;
   width: 50%;
   height: 200px;
@@ -198,4 +282,96 @@ main .profile > ul .tool ul {
 }
 main .profile > ul .tool ul li {
   background-color: aqua;
+}
+main .web {
+  background-color: #fff;
+  width: 100%;
+}
+main .web .web_project {
+  width: 100%;
+}
+main .web .web_project .web_project_contents {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  width: 100%;
+}
+main .web .web_project .web_project_contents .web_img_wrap {
+  width: 30%;
+  position: relative;
+}
+main .web .web_project .web_project_contents .web_img_wrap img {
+  width: 100%;
+  height: auto;
+}
+main .web .web_project .web_project_contents .web_img_wrap p {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  font-size: 1.563rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #607C9A;
+  border-radius: 100%;
+  padding: 10px 15px;
+}
+main .web .web_project .web_project_contents .web_text {
+  width: calc(70% - 100px);
+}
+main .web .web_project .web_project_contents .web_text h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: capitalize;
+  line-height: 2;
+}
+main .web .web_project .web_project_contents .web_text p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+main .web .web_project .web_project_contents .web_text a {
+  display: inline-block;
+  background-color: #304A67;
+  color: #fff;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+main .detail {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+main .detail .detail_page .detail_img_wrap {
+  padding-top: 150%;
+}
+main .sns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+main .etc .logo h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 2;
+}
+main .etc .logo .logo_wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+main .etc .poster h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 2;
+}
+main .etc .poster .poster_wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+main .etc .poster .poster_wrap .poster_img {
+  padding-top: 125%;
 }/*# sourceMappingURL=main.css.map */

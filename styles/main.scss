@@ -10,12 +10,54 @@ $subColor:#607C9A;
 $pointColorDeep:#304A67;
 @mixin titletext {font-size:$f40px; color:$pointColorDeep; font-weight:800;}
 header {
-
+    background-color:$mainColor; width:300px; height:100vh;
+    display:flex; flex-flow:column nowrap; justify-content:center; align-items:center;
+    position:fixed; left:0; top:0; z-index:999;
+    display:none;
+    .pagename {
+        // background-color:dodgerblue;
+        h1 {
+            font-size:$f90px; font-weight:800; letter-spacing:-0.04em;
+            color:$pointColorDeep; line-height:1.6; padding-bottom:20px;
+            display:none;
+        }
+        h1:first-child {display: flex;}
+    }
+    nav {
+        // background-color:springgreen;
+        width:100%;
+        ul {
+            display:flex; flex-flow:column nowrap; justify-content:space-between; align-items:center; width:100%; height:80vh;
+            li {
+                // background-color:darkgrey;
+                width:120px; height:120px; text-align:center; padding:10px;
+                border:11px solid $subColor; 
+                img {width:auto; height:100%;}
+            }
+            .nav_active {
+                width:150px; height:150px;
+            }
+        }
+    }
 }
 main {
+    background-color:$mainColor;
+    //공통설정
+    > * {width:calc(100% - 300px); margin-left:300px;  padding:60px;}
+    .text_wrap {
+        h1 {font-size:$f30px; font-weight:800; line-height:2;}
+        p {font-size:$f20px;}
+    }
+    .img_wrap {
+        background-color:khaki;
+        overflow:hidden; width:100%; padding-top:100%; border-radius:20px;
+        border:7px solid $subColor;
+        img {width:100%;}
+    }
+    //e:공통설정
     .intro {
         background-color:$mainColor;
-        height:100vh;
+        width:100%; height:100vh; margin:0 auto;
         .name {
             // background-color:rebeccapurple;
             width:100%; height:100px; text-align:right;
@@ -30,7 +72,7 @@ main {
             .start {
                 // background-color:plum;
                 display:flex; flex-flow:column nowrap; justify-content:center; align-items:center;
-                width:30%; border:10px solid $pointColorDeep;
+                width:30%; height:auto; border:10px solid $pointColorDeep;
                 .move {
                     display:flex;
                     span {
@@ -44,7 +86,7 @@ main {
                 p:last-child {@include titletext(); letter-spacing:0.5em;}
             }//e:start
             .main_nav {
-                display:flex; justify-content:space-between; width:70%;
+                display:flex; justify-content:space-between; width:70%; height:auto;
                 li {
                     // background-color:greenyellow;
                     width:20%;
@@ -93,7 +135,7 @@ main {
             }
             .me {
                 justify-content:center;
-                .img_wrap {background-color:purple; width:50%; height:200px;}
+                .profile_img_wrap {background-color:purple; width:50%; height:200px;}
                 .me_contents {
                     display:flex; flex-flow:column nowrap; align-items: center;
                     h1 {font-size:$f30px; font-weight:600; color:$subColor; line-height:1.5;}
@@ -124,6 +166,68 @@ main {
         }//e:ul
     }//e:profile
     .web {
-
+        background-color:#fff; width:100%;
+        .web_project {
+            // background-color:lightblue;
+            width:100%;
+            .web_project_contents {
+                // background-color:lavenderblush;
+                display:flex; flex-flow:row nowrap; align-items:center; justify-content:space-between; margin-bottom:60px;
+                width:100%; 
+                .web_img_wrap {
+                    width:30%; position:relative;
+                    img{width:100%; height:auto;}
+                    p {
+                        transform:translate(-50%, -50%);
+                        position:absolute; bottom:90px; left:50%;
+                        font-size:$f25px; font-weight:700;
+                        color:#fff; background-color:$subColor; border-radius:100%;
+                        padding:10px 15px;
+                    }
+                }
+                .web_text {
+                    width:calc(70% - 100px);
+                    h1 {
+                        font-size:$f40px; font-weight:800; text-transform:capitalize;
+                        line-height:2;
+                    }
+                    p {font-size:$f20px; line-height:1.5;}
+                    a {
+                        display:inline-block;
+                        background-color:$pointColorDeep; color:#fff;
+                        border-radius:50px; padding:10px 20px; margin-top:20px;
+                    }
+                }
+            }
+        }
     }//e:web
+    .detail {
+        display:grid; grid-template-columns:repeat(3, 1fr); gap:30px;
+        .detail_page {
+            .detail_img_wrap {padding-top:150%;}
+        }
+    }
+    .sns {
+        display:grid; grid-template-columns:repeat(3, 1fr); gap:30px;
+        .sns_page {
+        }
+    }//e:sns
+    .etc {
+        .logo {
+            h1 {font-size:$f40px; font-weight:800; line-height:2;}
+            .logo_wrap {
+                display:grid; grid-template-columns:repeat(3, 1fr); gap:30px;
+                .logo_img {}
+            }
+        }//e:logo
+        .poster {
+            h1 {font-size:$f40px; font-weight:800; line-height:2;}
+            .poster_wrap {
+                display:grid; grid-template-columns:repeat(3, 1fr); gap:30px;
+                .poster_img {
+                    padding-top:125%;
+                }
+            }
+        }//e:poster
+    }
 }//e:main
